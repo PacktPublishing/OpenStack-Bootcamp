@@ -1,0 +1,28 @@
+Let’s DevStack
+$ ifconfig 
+
+: Add Stack User
+$ sudo useradd -s /bin/bash -d /opt/stack -m stack
+
+Add Stack user to sudoers
+$ echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
+$ sudo su– stack
+$ sudo id
+
+Download DevStack
+$ sudo apt-get install -y git-core
+$ git clone  https://git.openstack.org/openstack-dev/devstack
+
+Configure DevStack
+$ cd devstack
+$ cp samples/local.conf .
+$ HOST_IP="192.168.56.101"
+$ echo "HOST_IP=${HOST_IP}" >>local.conf
+
+Installation begins
+$ ./stack.sh
+
+Devstack cheat sheet 
+$ ./stack.sh
+$ ./unstack.sh
+$ ./clean.sh

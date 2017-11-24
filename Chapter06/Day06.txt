@@ -1,0 +1,76 @@
+##########Day 6: Field training exercise##########
+
+#####1.1.With Command-line#####
+
+hostname
+pwd
+ls
+uname -a
+cd /opt/stack/devstack
+source userrc_early
+export | grep OS_
+openstack --version
+openstack service list
+openstack --help
+
+
+#####3.1. OpenStack CLI Clients (OSC)#####
+
+source /opt/stack/devstack/demorc
+export | grep OS_
+openstack --version
+openstack service list
+openstack network list
+
+
+#####3.2. Launch an Instance Using OpenStack CLI#####
+
+openstack image list
+openstack flavor list
+ssh-keygen -q -N ""
+openstack keypair create --public-key ~/.ssh/id_rsa.pub KP_hellovinoth
+openstack keypair list
+openstack security group rule create --proto tcp --dst-port 22 default
+openstack network list
+openstack server create --flavor m1.nano --image cirros-0.3.4-x86_64-uec --nic net-id=65ba9c58-b64a-47bd-bf2c-fe2c54512354 --security-group default --key-name KP_hellovinoth VM_hellovinoth_OSC
+openstack server list
+
+
+#####3.3. Connect to the Instance Using SSH#####
+
+openstack floating ip create public
+openstack server add floating ip VM_hellovinoth_OSC 172.24.4.4
+openstack server list
+
+
+#####3.4 Terminate the created instance#####
+
+openstack server delete VM_hellovinoth_OSC
+openstack server list
+
+
+#####4.2. Add an Image Using Glance CLI#####
+
+wget https://cloud-images.ubuntu.com/releases/14.04.4/release-20170831/ubuntu-14.04-server-cloudimg-amd64-disk1.img
+ls -lh /opt/stack/ubuntu-14.04-server-cloudimg-amd64-disk1.img
+qemu-img info /opt/stack/ubuntu-14.04-server-cloudimg-amd64-disk1.img
+openstack image --help
+openstack image create "Ubuntu14_04" --file ubuntu-14.04-server-cloudimg-amd64-disk1.img --disk-format qcow2 --container-format bare
+openstack image list
+
+
+#####4.3. Launch an instance from the new image#####
+
+openstack server create --flavor ds512M --image Ubuntu14_04 --nic net-id=65ba9c58-b64a-47bd-bf2c-fe2c54512354 --security-group default --key-name KP_hellovinoth VM_Ubuntu_OSC
+openstack server list
+openstack server show VM_Ubuntu_OSC
+
+
+#####5.2. Attach cinder volume to the virtual machine#####
+
+ssh ubuntu@<your_floating_IP_here>
+sudo su
+fdisk -l  
+
+
+##########

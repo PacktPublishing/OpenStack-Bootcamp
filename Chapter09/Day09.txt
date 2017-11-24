@@ -1,0 +1,74 @@
+__________________________Day 09 Repair OpenStack___________________________
+
+-----Structured Troubleshooting Approaches-----
+
+service glance-api status
+
+service glance-registry status
+
+
+
+-----Keystone-----
+
+ps -aux | grep keystone
+
+service apache2 status
+
+service keystone status    #This command should show the keystone process is dead.#
+
+openstack --debug user list
+
+
+
+-----Glance-----
+
+service glance-api status
+
+service glance-registry status
+
+glance image-list
+
+
+
+-----Nova-----
+
+service nova-api status
+
+service nova-consoleauth status
+
+service nova-scheduler status
+
+service nova-conductor status
+
+service nova-novncproxy status
+
+nova service-list
+
+service nova-compute status
+ 
+
+ 
+-----Neutron-----
+
+service neutron-server status
+
+service neutron-linuxbridge-agent status
+
+service neutron-dhcp-agent status
+
+service neutron-metadata-agent status
+
+service neutron-l3-agent status
+
+neutron agent-list
+
+
+
+-----Database-----
+
+service mysql status
+
+mysql -u glance -p
+
+
+
