@@ -35,11 +35,11 @@ Requirements:
 There are no codes for chapter 02, 03, 04, 05, 07, and 10.
 
 ## Related Products:
-* [OpenStack: Design and Implement Cloud Infrastructure](openstack:%20Design%20and%20Implement%20Cloud%20Infrastructure?utm_source=github&utm_medium=repository&utm_content=9781788290746)
+* [OpenStack: Design and Implement Cloud Infrastructure](https://www.packtpub.com/virtualization-and-cloud/openstack-design-and-implement-cloud-infrastructure?utm_source=github&utm_medium=repository&utm_content=9781788290746)
 
-* [Mastering OpenStack - Second Edition](Mastering%20OpenStack%20-%20Second%20Edition?utm_source=github&utm_medium=repository&utm_content=9781786463982)
+* [Mastering OpenStack - Second Edition](https://www.packtpub.com/virtualization-and-cloud/mastering-openstack-second-edition?utm_source=github&utm_medium=repository&utm_content=9781786463982)
 
-* [OpenStack for Architects](OpenStack%20for%20Architects?utm_source=github&utm_medium=repository&utm_content=9781784395100)
+* [OpenStack for Architects](https://www.packtpub.com/virtualization-and-cloud/openstack-architects?utm_source=github&utm_medium=repository&utm_content=9781784395100)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
