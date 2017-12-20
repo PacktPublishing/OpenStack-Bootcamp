@@ -1,5 +1,5 @@
 # OpenStack Bootcamp
-This is the code repository for [OpenStack Bootcamp](https://www.packtpub.com/big-data-and-business-intelligence/python-finance-second-edition?utm_source=github&utm_medium=repository&utm_content=9781787125698), published by Packt. It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [OpenStack Bootcamp](https://www.packtpub.com/virtualization-and-cloud/openstack-bootcamp?utm_source=github&utm_medium=repository&utm_content=9781788293303), published by Packt. It contains all the supporting project files necessary to work through the book from start to finish.
 
 ## About the book
 OpenStack is developed by a thriving community of individual developers around the globe and is backed by most of the leading players in the cloud space today. OpenStack is a free and open source software platform for cloud computing, mostly deployed as an infrastructure-as-a-service (IaaS). 
